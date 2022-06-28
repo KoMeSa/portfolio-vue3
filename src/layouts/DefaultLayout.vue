@@ -1,23 +1,25 @@
 <script setup>
-import NavigationMenu from "@/components/NavigationMenu.vue";
+import SideBar from "@/components/sidebar/SideBar.vue";
+import { sidebarWidth } from "@/helpers/stateSiddeBar";
 
-const routes = [
-  { title: "Home", url: "/" },
-  { title: "About", url: "/about" },
-];
 </script>
 
 <template>
   <div class="default">
-    <NavigationMenu :routes="routes" />
-    <router-view></router-view>
+    <SideBar :routes="routes" />
+    <div class="main-container" :style="{ 'margin-left': sidebarWidth }">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 
 <style lang="scss">
- .default {
-  display: flex;
-  flex-direction: row;
- }
+.default {
+  // display: flex;
+  // flex-direction: row;
+  .main-container {
+    // padding: 0 50px;
+  }
+}
 </style>
