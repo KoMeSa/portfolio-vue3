@@ -1,12 +1,12 @@
 <script setup>
+import { routes } from "@/helpers/arrayRoutes";
+import SideBarList from "@/components/sidebar/SideBarList.vue";
+import ToggleItem from "@/components/sidebar/ToggleItem.vue";
 import {
   collapsed,
   sidebarWidth,
   toggleSidebar,
 } from "@/helpers/stateSiddeBar";
-import { routes } from "@/helpers/arrayRoutes";
-import SideBarList from "@/components/sidebar/SideBarList.vue";
-import ToggleItem from "@/components/sidebar/ToggleItem.vue";
 </script>
 
 <template>

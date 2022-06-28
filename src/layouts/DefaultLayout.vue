@@ -6,7 +6,7 @@ import { sidebarWidth } from "@/helpers/stateSiddeBar";
 
 <template>
   <div class="default">
-    <SideBar :routes="routes" />
+    <SideBar/>
     <div class="main-container" :style="{ 'margin-left': sidebarWidth }">
       <router-view></router-view>
     </div>
