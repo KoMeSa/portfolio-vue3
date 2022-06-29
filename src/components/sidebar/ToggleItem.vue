@@ -25,6 +25,11 @@ const props = defineProps({
   height: 20px;
   width: 20px;
   transition: 0.3s ease;
+  color: #a0afa0;
+
+  &:hover {
+    color: #37B453;
+  }
 }
 .rotate-180 {
   transform: rotate(180deg);

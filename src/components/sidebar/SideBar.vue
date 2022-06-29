@@ -12,7 +12,7 @@ import {
 <template>
   <nav class="sidebar" :style="{ width: sidebarWidth }">
     <ToggleItem :collapsed="collapsed" @click="toggleSidebar" />
-    <SideBarList :routes="routes" />
+    <SideBarList :routes="routes" :collapsed="collapsed" />
   </nav>
 </template>
 
@@ -25,8 +25,8 @@ import {
   left: 0;
   bottom: 0;
   z-index: 1;
-  background: #264653;
-  color: white;
+  background: #003600;
+
   box-sizing: border-box;
   transition: 0.3s ease;
 
