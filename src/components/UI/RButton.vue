@@ -13,5 +13,9 @@
   &:hover {
     background: $color-button-hover;
   }
+
+  &:active {
+    background: $color-button-active;
+  }
 }
 </style>
