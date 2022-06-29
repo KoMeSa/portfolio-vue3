@@ -1,5 +1,6 @@
 <script setup>
-import TagText from '../components/TagText.vue'
+import TagText from "../components/TagText.vue";
+import RButton from "../components/UI/RButton.vue";
 </script>
 
 
@@ -7,9 +8,17 @@ import TagText from '../components/TagText.vue'
   <div class="container">
     <div>
       <TagText text="Ruslan Komesa" fontSize="40px" mBottom="20px"></TagText>
-      <TagText text="Front-End developer" tag="p" fontSize="20px"></TagText>
+      <TagText
+        text="Front-End Developer"
+        tag="p"
+        fontSize="20px"
+        mBottom="40px"
+      ></TagText>
+      <div style="display: flex; justify-content: center">
+        <RButton>Click on this button:)</RButton>
+      </div>
     </div>
-    <div>Second block</div>
+    <div><div class="circle"></div></div>
   </div>
 </template>
 

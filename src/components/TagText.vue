@@ -4,7 +4,7 @@ import { defineProps } from "vue";
 const props = defineProps({
   text: {
     type: String,
-    default: "Some text",
+    default: "",
   },
   tag: {
     type: String,
@@ -34,7 +34,7 @@ const props = defineProps({
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .block__text {
   .block__text-title {
     padding: 15px 25px;
