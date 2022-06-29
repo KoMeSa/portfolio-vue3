@@ -5,21 +5,16 @@ import { sidebarWidth } from "@/helpers/stateSiddeBar";
 </script>
 
 <template>
-  <div class="default">
     <SideBar/>
-    <div class="main-container" :style="{ 'margin-left': sidebarWidth }">
+    <div class="content" :style="{ 'margin-left': sidebarWidth }">
       <router-view></router-view>
     </div>
-  </div>
 </template>
 
 
 <style lang="scss">
-.default {
-  // display: flex;
-  // flex-direction: row;
-  .main-container {
-    // padding: 0 50px;
+  .content {
+    transition: 0.3s ease;
+    background:  $color-black;
   }
-}
 </style>

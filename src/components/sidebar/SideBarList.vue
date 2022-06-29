@@ -39,18 +39,21 @@ const props = defineProps({
     box-sizing: border-box;
     cursor: pointer;
     transition: 0.5s ease;
-    border-left: 1px solid transparent;
     border: 1px solid transparent;
     border-radius: 7px;
 
     &:hover {
-      border: 1px solid #37b453;
+      border: 1px solid $color-link-hover;
+      color: $color-link-hover;
       .sidebar__item-link {
-        color: #37b453;
+        color: $color-link-hover;
         svg {
           path {
-            fill: #37b453;
+            fill: $color-link-hover;
           }
+        }
+        span {
+          color: $color-link-hover;
         }
       }
     }
@@ -59,8 +62,14 @@ const props = defineProps({
       justify-content: flex-start;
       width: 100%;
       padding: 15px 10px;
-      color: #a0afa0;
+      color: $color-white;
       text-decoration: none;
+
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
 
       span {
         margin-left: 10px;

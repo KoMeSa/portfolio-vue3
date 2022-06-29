@@ -25,7 +25,8 @@ import {
   left: 0;
   bottom: 0;
   z-index: 1;
-  background: #003600;
+  background: $color-background;
+  border-right: 1px solid $color-text-business-black;
 
   box-sizing: border-box;
   transition: 0.3s ease;
