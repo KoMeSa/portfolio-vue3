@@ -18,7 +18,11 @@ import RButton from "../components/UI/RButton.vue";
         <RButton>Click on this button:)</RButton>
       </div>
     </div>
-    <div><div class="circle"></div></div>
+    <div>
+      <div class="man">
+        <img src="../assets/r.svg" alt="RK" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,5 +33,21 @@ import RButton from "../components/UI/RButton.vue";
   grid-template-rows: 100vh;
   justify-items: center;
   align-items: center;
+}
+
+.man {
+  width: 400px;
+  height: 400px;
+  border: 1px solid $color-border;
+  border-radius: 20%;
+  background: $color-primary;
+  position: relative;
+
+  img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 }
 </style>
