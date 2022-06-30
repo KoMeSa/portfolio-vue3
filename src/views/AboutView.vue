@@ -2,7 +2,7 @@
 import TagText from "../components/TagText.vue";
 import BlockImage from "../components/BlockImage.vue";
 import RButton from "../components/UI/RButton.vue";
-import { homeTitle, homeText } from "@/helpers/letterArray";
+import { aboutTitle, aboutText } from "@/helpers/letterArray";
 </script>
 
 
@@ -10,14 +10,14 @@ import { homeTitle, homeText } from "@/helpers/letterArray";
   <div class="container">
     <div>
       <TagText
-        :lettersArray="homeTitle"
+        :lettersArray="aboutTitle"
         fontSize="50px"
         mBottom="20px"
       ></TagText>
       <TagText
-        :lettersArray="homeText"
+        :text="aboutText"
         tag="p"
-        fontSize="25px"
+        fontSize="20px"
         mBottom="40px"
       ></TagText>
       <div style="display: flex; justify-content: center">

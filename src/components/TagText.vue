@@ -10,11 +10,15 @@ const props = defineProps({
     type: String,
     default: "20px",
   },
+  lettersArray: { type: Array, default: [] },
+  text: {
+    type: String,
+    default: "",
+  },
   mBottom: {
     type: String,
     default: "0px",
   },
-  lettersArray: { type: Array, default: [] },
 });
 </script>
 
@@ -23,13 +27,24 @@ const props = defineProps({
 <template>
   <div class="block__text" :style="{ 'margin-bottom': mBottom }">
     <div class="block__text-tag">&#60;{{ tag }}&#62;</div>
-    <div class="block__text-title" :style="{ 'font-size': fontSize }">
+    <div
+      v-if="lettersArray.length"
+      class="block__text-title"
+      :style="{ 'font-size': fontSize }"
+    >
       <span
         class="letter"
         v-for="(letter, index) in lettersArray"
         :key="index"
         v-html="letter"
       ></span>
+    </div>
+    <div
+      v-if="text"
+      class="block__text-title gray"
+      :style="{ 'font-size': fontSize }"
+    >
+      {{ text }}
     </div>
     <div class="block__text-tag">&#60;{{ tag }}&#47;&#62;</div>
   </div>
@@ -42,6 +57,7 @@ const props = defineProps({
     padding: 15px 25px;
     color: $color-white;
     animation: left-text 1s ease;
+    max-width: 500px;
 
     .letter {
       display: inline-block;
@@ -51,6 +67,10 @@ const props = defineProps({
         animation: bounce 0.7s ease;
       }
     }
+  }
+
+  .gray {
+    color: $color-gray;
   }
   .block__text-tag {
     color: $color-gray;

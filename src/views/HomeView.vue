@@ -15,9 +15,9 @@ import { homeTitle, homeText } from "@/helpers/letterArray";
         mBottom="20px"
       ></TagText>
       <TagText
-        :lettersArray="homeText"
+        :text="homeText"
         tag="p"
-        fontSize="25px"
+        fontSize="20px"
         mBottom="40px"
       ></TagText>
       <div style="display: flex; justify-content: center">
@@ -27,8 +27,8 @@ import { homeTitle, homeText } from "@/helpers/letterArray";
     <div>
       <BlockImage
         :src="require('../assets/blue.svg')"
-        :width="450"
-        :height="450"
+        :width="400"
+        :height="400"
       ></BlockImage>
     </div>
   </div>
