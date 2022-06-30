@@ -11,8 +11,9 @@ import {
 
 <template>
   <nav class="sidebar" :style="{ width: sidebarWidth }">
-    <ToggleItem :collapsed="collapsed" @click="toggleSidebar" />
+    <img :style="collapsed ? 'width:50px' : 'width:150px'" src="../../assets/blue.svg" alt="">
     <SideBarList :routes="routes" :collapsed="collapsed" />
+    <ToggleItem :collapsed="collapsed" @click="toggleSidebar" />
   </nav>
 </template>
 
@@ -34,5 +35,11 @@ import {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  img {
+    position: absolute;
+    top: 20px;
+    transition: 0.3s ease;
+  }
 }
 </style>
