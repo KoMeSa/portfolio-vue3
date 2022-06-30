@@ -1,5 +1,6 @@
 <script setup>
 import TagText from "../components/TagText.vue";
+import BlockImage from "../components/BlockImage.vue";
 import RButton from "../components/UI/RButton.vue";
 </script>
 
@@ -19,9 +20,11 @@ import RButton from "../components/UI/RButton.vue";
       </div>
     </div>
     <div>
-      <div class="man">
-        <img src="../assets/r.svg" alt="RK" />
-      </div>
+      <BlockImage
+        :src="require('../assets/r.svg')"
+        :width="400"
+        :height="400"
+      ></BlockImage>
     </div>
   </div>
 </template>
@@ -33,21 +36,5 @@ import RButton from "../components/UI/RButton.vue";
   grid-template-rows: 100vh;
   justify-items: center;
   align-items: center;
-}
-
-.man {
-  width: 400px;
-  height: 400px;
-  border: 1px solid $color-border;
-  border-radius: 20%;
-  background: $color-primary;
-  position: relative;
-
-  img {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
 }
 </style>
