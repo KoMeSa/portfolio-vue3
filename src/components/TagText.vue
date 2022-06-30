@@ -2,10 +2,6 @@
 import { defineProps } from "vue";
 
 const props = defineProps({
-  text: {
-    type: String,
-    default: "",
-  },
   tag: {
     type: String,
     default: "h1",
@@ -18,6 +14,7 @@ const props = defineProps({
     type: String,
     default: "0px",
   },
+  lettersArray: { type: Array, default: [] },
 });
 </script>
 
@@ -27,7 +24,12 @@ const props = defineProps({
   <div class="block__text" :style="{ 'margin-bottom': mBottom }">
     <div class="block__text-tag">&#60;{{ tag }}&#62;</div>
     <div class="block__text-title" :style="{ 'font-size': fontSize }">
-      {{ text }}
+      <span
+        class="letter"
+        v-for="(letter, index) in lettersArray"
+        :key="index"
+        v-html="letter"
+      ></span>
     </div>
     <div class="block__text-tag">&#60;{{ tag }}&#47;&#62;</div>
   </div>
@@ -39,9 +41,42 @@ const props = defineProps({
   .block__text-title {
     padding: 15px 25px;
     color: $color-white;
+    animation: left-text 1s ease;
+
+    .letter {
+      display: inline-block;
+      &:hover {
+        cursor: pointer;
+        color: $color-secondary;
+        animation: bounce 0.7s ease;
+      }
+    }
   }
   .block__text-tag {
     color: $color-gray;
+  }
+}
+
+@keyframes bounce {
+  25% {
+    transform: scale(0.8, 1.3);
+  }
+  50% {
+    transform: scale(1.1, 0.8);
+  }
+  75% {
+    transform: scale(0.7, 1.2);
+  }
+}
+
+@keyframes left-text {
+  from {
+    opacity: 0;
+    transform: translate(-250px);
+  }
+  to {
+    transform: translate(0px);
+    opacity: 1;
   }
 }
 </style>
