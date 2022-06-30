@@ -26,9 +26,9 @@ import { homeTitle, homeText } from "@/helpers/letterArray";
     </div>
     <div>
       <BlockImage
-        :src="require('../assets/r.svg')"
-        :width="400"
-        :height="400"
+        :src="require('../assets/blue.svg')"
+        :width="450"
+        :height="450"
       ></BlockImage>
     </div>
   </div>

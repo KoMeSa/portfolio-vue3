@@ -72,10 +72,10 @@ const props = defineProps({
 @keyframes left-text {
   from {
     opacity: 0;
-    transform: translate(-250px);
+    transform: scale(0.3) translate(-400px);
   }
   to {
-    transform: translate(0px);
+    transform: scale(1) translate(0px);
     opacity: 1;
   }
 }

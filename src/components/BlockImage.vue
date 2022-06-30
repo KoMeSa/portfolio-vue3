@@ -29,10 +29,13 @@ const setSize = computed(() => {
 
 <style lang="scss" scoped>
 .block__image {
-  border: 1px solid $color-border;
+  // border: 1px solid $color-border;
+  // background: $color-primary;
+  border: 1px solid $color-primary;
   border-radius: 20%;
-  background: $color-primary;
+  transform: rotate(45deg);
   position: relative;
+  animation: rotblock 1s ease;
 
   img {
     display: inline-block;
@@ -40,5 +43,16 @@ const setSize = computed(() => {
     height: 100%;
     border-radius: 50%;
   }
+}
+
+@keyframes rotblock {
+    from{
+      transform:scale(0.1) rotate(-360deg);
+      opacity: 0.1;
+    }to{
+       transform:scale(1) rotate(45deg);
+
+       opacity: 1;
+    }
 }
 </style>
