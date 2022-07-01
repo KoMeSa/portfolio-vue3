@@ -1,6 +1,6 @@
 <script setup>
 import TagText from "../components/TagText.vue";
-import BlockImage from "../components/BlockImage.vue";
+import CloudTag from "../components/CloudTag.vue";
 import RButton from "../components/UI/RButton.vue";
 import { aboutTitle, aboutText } from "@/helpers/letterArray";
 </script>
@@ -25,17 +25,9 @@ import { aboutTitle, aboutText } from "@/helpers/letterArray";
       </div>
     </div>
     <div>
-       Here is block
+      <CloudTag />
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100vh;
-  justify-items: center;
-  align-items: center;
-}
-</style>
+

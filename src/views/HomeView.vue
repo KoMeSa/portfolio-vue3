@@ -34,12 +34,3 @@ import { homeTitle, homeText } from "@/helpers/letterArray";
   </div>
 </template>
 
-<style lang="scss" scoped>
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100vh;
-  justify-items: center;
-  align-items: center;
-}
-</style>
