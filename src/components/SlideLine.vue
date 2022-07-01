@@ -48,7 +48,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .slide-line {
   max-width: 600px;
   margin-bottom: 20px;
