@@ -4,8 +4,8 @@ import { sidebarWidth } from "@/helpers/stateSiddeBar";
 </script>
 
 <template>
-  <SideBar />
   <div class="content" :style="{ 'margin-left': sidebarWidth }">
+  <SideBar />
     <router-view></router-view>
   </div>
 </template>
@@ -14,6 +14,6 @@ import { sidebarWidth } from "@/helpers/stateSiddeBar";
 <style lang="scss">
 .content {
   transition: 0.3s ease;
-  background: $color-black;
+  background: $color-background;
 }
 </style>

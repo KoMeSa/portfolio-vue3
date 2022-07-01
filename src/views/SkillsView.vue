@@ -1,5 +1,7 @@
 <script setup>
 import TagText from "../components/TagText.vue";
+import SlidersBlock from "../components/SlidersBlock.vue";
+import SlideLine from "../components/SlideLine.vue";
 import RButton from "../components/UI/RButton.vue";
 import { skillsTitle, skillsText } from "@/helpers/letterArray";
 </script>
@@ -24,10 +26,13 @@ import { skillsTitle, skillsText } from "@/helpers/letterArray";
       </div>
     </div>
     <div>
-      Here is asasdassd
+      <SlidersBlock />
     </div>
   </div>
 </template>
+
+
+
 
 
 

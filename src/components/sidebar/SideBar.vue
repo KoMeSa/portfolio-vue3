@@ -11,7 +11,7 @@ import {
 
 <template>
   <nav class="sidebar" :style="{ width: sidebarWidth }">
-    <img :style="collapsed ? 'width:50px' : 'width:150px'" src="../../assets/blue.svg" alt="">
+    <!-- <img :style="collapsed ? 'width:50px' : 'width:150px'" src="../../assets/blue.svg" alt=""> -->
     <SideBarList :routes="routes" :collapsed="collapsed" />
     <ToggleItem :collapsed="collapsed" @click="toggleSidebar" />
   </nav>

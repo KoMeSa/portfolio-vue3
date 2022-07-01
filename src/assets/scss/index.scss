@@ -1,11 +1,17 @@
 @import 'variables.scss';
 
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $color-white;
+}
 
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100vh;
-    justify-items: center;
     align-items: center;
+    padding: 0 50px;
+    width: 100%;
 }
