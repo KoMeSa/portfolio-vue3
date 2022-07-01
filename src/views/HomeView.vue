@@ -3,6 +3,8 @@ import TagText from "../components/TagText.vue";
 import BlockImage from "../components/BlockImage.vue";
 import RButton from "../components/UI/RButton.vue";
 import { homeTitle, homeText } from "@/helpers/letterArray";
+import logoBlue from  '@/assets/logo-blue.svg'
+import logo from  '@/assets/logo.svg'
 </script>
 
 
@@ -25,11 +27,7 @@ import { homeTitle, homeText } from "@/helpers/letterArray";
       </div>
     </div>
     <div>
-      <BlockImage
-        :src="require('../assets/blue.svg')"
-        :width="400"
-        :height="400"
-      ></BlockImage>
+      <BlockImage/>
     </div>
   </div>
 </template>

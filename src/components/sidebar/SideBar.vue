@@ -2,6 +2,7 @@
 import { routes } from "@/helpers/arrayRoutes";
 import SideBarList from "@/components/sidebar/SideBarList.vue";
 import ToggleItem from "@/components/sidebar/ToggleItem.vue";
+import smalLogo from "@/assets/logo-blue.svg";
 import {
   collapsed,
   sidebarWidth,
@@ -11,7 +12,7 @@ import {
 
 <template>
   <nav class="sidebar" :style="{ width: sidebarWidth }">
-    <!-- <img :style="collapsed ? 'width:50px' : 'width:150px'" src="../../assets/blue.svg" alt=""> -->
+    <img :style="collapsed ? 'width:50px' : 'width:150px'" :src="smalLogo" alt="">
     <SideBarList :routes="routes" :collapsed="collapsed" />
     <ToggleItem :collapsed="collapsed" @click="toggleSidebar" />
   </nav>
