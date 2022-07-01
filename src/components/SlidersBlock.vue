@@ -1,6 +1,7 @@
 <script setup>
 import TagText from "../components/TagText.vue";
 import SlideLine from "../components/SlideLine.vue";
+import RCard from "../components/UI/RCard.vue";
 </script>
 
 <template>
@@ -30,24 +31,12 @@ import SlideLine from "../components/SlideLine.vue";
       colorLine="#8383A6"
       :timeout="800"
     />
-    <div class="card">
+    <RCard>
       <h2>Note</h2>
       I mainly worked with Rest API on projects, so I know well how to work with
       the backend and properly build the architecture of the frontend to work
       with endpoints.
-    </div>
+    </RCard>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.card {
-  margin-top: 40px;
-  h2 {
-    margin-bottom: 14px;
-  }
-  padding: 20px;
-  background: $color-block;
-  border: 1px solid $color-border;
-  border-radius: 8px;
-}
-</style>
