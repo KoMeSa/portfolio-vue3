@@ -10,7 +10,7 @@ import logo from  '@/assets/logo.svg'
 
 <template>
   <div class="container">
-    <div>
+    <div class="left-side">
       <TagText
         :lettersArray="homeTitle"
         fontSize="50px"

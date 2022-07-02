@@ -8,7 +8,7 @@ import { aboutTitle, aboutText } from "@/helpers/letterArray";
 
 <template>
   <div class="container">
-    <div>
+    <div class="left-side">
       <TagText
         :lettersArray="aboutTitle"
         fontSize="50px"

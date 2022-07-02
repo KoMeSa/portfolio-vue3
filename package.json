@@ -13,6 +13,7 @@
     "TagCloud": "^2.2.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
+    "vue3-google-map": "^0.13.2",
     "vue3-slider": "^1.7.0",
     "vuex": "^4.0.0"
   },

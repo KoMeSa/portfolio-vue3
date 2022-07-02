@@ -9,7 +9,7 @@ import { skillsTitle, skillsText } from "@/helpers/letterArray";
 
 <template>
   <div class="container">
-    <div>
+    <div class="left-side">
       <TagText
         :lettersArray="skillsTitle"
         fontSize="50px"

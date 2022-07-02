@@ -12,6 +12,11 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100vh;
     align-items: center;
-    padding: 0 50px;
+    // column-gap: 10px;
+    // padding: 0 50px;
     width: 100%;
+
+    .left-side {
+        padding: 0px 50px;
+    }
 }
