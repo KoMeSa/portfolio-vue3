@@ -15,10 +15,10 @@ const props = defineProps({
 
 
 <template>
-  <textarea :placeholder="placeholder" name="" id="" rows="8" class="custom-tex"></textarea>
+  <textarea :placeholder="placeholder" name="" id="" rows="5" class="custom-tex"></textarea>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .custom-tex {
   width: 100%;
   background: $color-input;
