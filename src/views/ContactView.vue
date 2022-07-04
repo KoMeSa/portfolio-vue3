@@ -9,6 +9,7 @@ import TagText from "@/components/TagText.vue";
 import RModal from "@/components/UI/RModal.vue";
 import { contactTitle } from "@/helpers/letterArray";
 import { ref } from "vue";
+import { mySocials } from "@/helpers/mySocials";
 
 const modalOpened = ref(false);
 
@@ -21,27 +22,14 @@ const openModal = () => {
   <RModal :modalOpened="modalOpened" @close="modalOpened = false">
     <p>Sorry, but this functionality is not working now.</p>
     <p>You can contact me on social media.</p>
-    <a class="link" href="https://github.com/KoMeSa"
-      ><font-awesome-icon icon="fa-brands fa-github" /><span
-        >Ruslan Komesa/ KoMeSa</span
-      ></a
-    >
     <a
       class="link"
-      href="https://www.facebook.com/profile.php?id=100022332641111"
-      ><font-awesome-icon icon="fa-brands fa-facebook" /><span
-        >Ruslan Komesa</span
-      ></a
-    >
-    <a class="link" href="https://t.me/MiKaSo">
-      <font-awesome-icon icon="fa-brands fa-telegram" /><span
-        >@MiKaSo</span
-      ></a
-    >
-    <a class="link" href="https://mail.google.com/"
-      ><font-awesome-icon icon="fa-solid fa-envelope" /><span
-        >komesarus777@gmail.com</span
-      ></a
+      v-for="social in mySocials"
+      :key="social.link"
+      :href="social.link"
+      ><font-awesome-icon :icon="social.icon" /><span>{{
+        social.text
+      }}</span></a
     >
   </RModal>
   <div class="container">
