@@ -6,10 +6,44 @@ import RButton from "@/components/UI/RButton.vue";
 import TagSlot from "@/components/TagSlot.vue";
 import MapBlock from "@/components/MapBlock.vue";
 import TagText from "@/components/TagText.vue";
+import RModal from "@/components/UI/RModal.vue";
 import { contactTitle } from "@/helpers/letterArray";
+import { ref } from "vue";
+
+const modalOpened = ref(false);
+
+const openModal = () => {
+  modalOpened.value = true;
+};
 </script>
 
 <template>
+  <RModal :modalOpened="modalOpened" @close="modalOpened = false">
+    <p>Sorry, but this functionality is not working now.</p>
+    <p>You can contact me on social media.</p>
+    <a class="link" href="https://github.com/KoMeSa"
+      ><font-awesome-icon icon="fa-brands fa-github" /><span
+        >Ruslan Komesa/ KoMeSa</span
+      ></a
+    >
+    <a
+      class="link"
+      href="https://www.facebook.com/profile.php?id=100022332641111"
+      ><font-awesome-icon icon="fa-brands fa-facebook" /><span
+        >Ruslan Komesa</span
+      ></a
+    >
+    <a class="link" href="https://t.me/MiKaSo">
+      <font-awesome-icon icon="fa-brands fa-telegram" /><span
+        >@MiKaSo</span
+      ></a
+    >
+    <a class="link" href="https://mail.google.com/"
+      ><font-awesome-icon icon="fa-solid fa-envelope" /><span
+        >komesarus777@gmail.com</span
+      ></a
+    >
+  </RModal>
   <div class="container">
     <div class="left-side">
       <TagSlot tag="body">
@@ -21,7 +55,7 @@ import { contactTitle } from "@/helpers/letterArray";
               <RInput placeholder="Surname"></RInput>
               <RTextarea placeholder="Message"></RTextarea>
               <div style="display: flex; justify-content: center">
-                <RButton>Send</RButton>
+                <RButton @click.prevent="openModal">Send</RButton>
               </div>
             </form>
           </Card>
@@ -36,10 +70,26 @@ import { contactTitle } from "@/helpers/letterArray";
 
 
 <style lang="scss" scoped>
+.link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  text-decoration: none;
+
+  span {
+    margin-left: 20px;
+    padding-bottom: 5px;
+  }
+  svg {
+    height: 30px;
+    width: 30px;
+  }
+}
 .hide-map {
-   @media screen and (max-width: 1200px) {
-       display: none;
-    }
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 </style>
 
