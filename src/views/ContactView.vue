@@ -14,26 +14,33 @@ import { contactTitle } from "@/helpers/letterArray";
     <div class="left-side">
       <TagSlot tag="body">
         <div style="padding: 50px">
-          <TagText
-            tag="h1"
-            :lettersArray="contactTitle"
-            fontSize="50px"
-          ></TagText>
+          <TagText tag="h1" :lettersArray="contactTitle"></TagText>
           <Card>
-            <RInput placeholder="Name"></RInput>
-            <RInput placeholder="Surname"></RInput>
-            <RTextarea placeholder="Message"></RTextarea>
-            <div style="display: flex; justify-content: center">
-              <RButton>Send</RButton>
-            </div>
+            <form>
+              <RInput placeholder="Name"></RInput>
+              <RInput placeholder="Surname"></RInput>
+              <RTextarea placeholder="Message"></RTextarea>
+              <div style="display: flex; justify-content: center">
+                <RButton>Send</RButton>
+              </div>
+            </form>
           </Card>
         </div>
       </TagSlot>
     </div>
-    <div>
+    <div class="hide-map">
       <MapBlock></MapBlock>
     </div>
   </div>
-</template>\
+</template>
+
+
+<style lang="scss" scoped>
+.hide-map {
+   @media screen and (max-width: 1200px) {
+       display: none;
+    }
+}
+</style>
 
 

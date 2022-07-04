@@ -27,11 +27,7 @@ const props = defineProps({
 <template>
   <div class="block__text" :style="{ 'margin-bottom': mBottom }">
     <div class="block__text-tag">&#60;{{ tag }}&#62;</div>
-    <div
-      v-if="lettersArray.length"
-      class="block__text-title"
-      :style="{ 'font-size': fontSize }"
-    >
+    <div v-if="lettersArray.length" class="block__text-title text-big">
       <span
         class="letter"
         v-for="(letter, index) in lettersArray"
@@ -39,11 +35,7 @@ const props = defineProps({
         v-html="letter"
       ></span>
     </div>
-    <div
-      v-if="text"
-      class="block__text-title gray"
-      :style="{ 'font-size': fontSize }"
-    >
+    <div v-if="text" class="block__text-title text-small gray ">
       {{ text }}
     </div>
     <div class="block__text-tag">&#60;{{ tag }}&#47;&#62;</div>
@@ -57,7 +49,7 @@ const props = defineProps({
     padding: 15px 25px;
     color: $color-white;
     animation: left-text 1s ease;
-    max-width: 500px;
+    max-width: 600px;
 
     .letter {
       display: inline-block;
@@ -74,6 +66,29 @@ const props = defineProps({
   }
   .block__text-tag {
     color: $color-gray;
+  }
+}
+
+.text-big {
+  font-size: 50px;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 40px;
+  }
+
+   @media screen and (max-width: 400px) {
+    font-size: 20px;
+  }
+}
+
+.text-small {
+  font-size: 20px;
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+   @media screen and (max-width: 400px) {
+    font-size: 12px;
   }
 }
 

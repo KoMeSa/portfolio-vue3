@@ -12,24 +12,15 @@ import { aboutTitle, aboutText } from "@/helpers/letterArray";
     <div class="left-side">
       <TagSlot tag="body">
         <div style="padding: 50px">
-          <TagText
-            :lettersArray="aboutTitle"
-            fontSize="50px"
-            mBottom="20px"
-          ></TagText>
-          <TagText
-            :text="aboutText"
-            tag="p"
-            fontSize="20px"
-            mBottom="40px"
-          ></TagText>
+          <TagText :lettersArray="aboutTitle" mBottom="20px"></TagText>
+          <TagText :text="aboutText" tag="p" mBottom="40px"></TagText>
           <div style="display: flex; justify-content: center">
             <RButton>My skills:)</RButton>
           </div>
         </div>
       </TagSlot>
     </div>
-    <div>
+    <div class="right-side">
       <CloudTag />
     </div>
   </div>

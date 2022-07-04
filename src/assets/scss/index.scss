@@ -10,13 +10,20 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100vh;
+    grid-template-rows: min(100vh);
     align-items: center;
-    // column-gap: 10px;
-    // padding: 0 50px;
     width: 100%;
 
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: 1fr;
+    }
+
     .left-side {
-        padding: 0px 50px;
+        padding: 20px 20px;
+    }
+
+    .right-side {
+        padding: 50px;
     }
 }
+

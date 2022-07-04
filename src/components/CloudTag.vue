@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, computed } from "vue";
 const TagCloud = require("TagCloud");
 
 onMounted(() => {
@@ -22,7 +22,8 @@ onMounted(() => {
     "npm",
     "Rest API",
   ];
-  const options = {
+
+  let options = {
     radius: 300,
   };
 
@@ -34,5 +35,17 @@ onMounted(() => {
 <template>
   <div class="tagcloud"></div>
 </template>
+
+
+<style lang="scss" scoped>
+.tagcloud {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+</style>
+
+
+
 
 

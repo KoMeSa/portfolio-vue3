@@ -30,6 +30,11 @@ const props = defineProps({
   &:hover {
     color:  $color-link-hover;
   }
+
+   @media screen and (max-width: 600px) {
+        display: none;
+    }
+
 }
 .rotate-180 {
   transform: rotate(180deg);
