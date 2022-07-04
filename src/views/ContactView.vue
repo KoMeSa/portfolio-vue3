@@ -21,9 +21,10 @@ const openModal = () => {
 <template>
   <RModal :modalOpened="modalOpened" @close="modalOpened = false">
     <p>Sorry, but this functionality is not working now.</p>
-    <p>You can contact me on social media.</p>
+    <p style="margin-bottom: 20px">You can contact me on social media.</p>
     <a
       class="link"
+      target="_blank"
       v-for="social in mySocials"
       :key="social.link"
       :href="social.link"
