@@ -232,5 +232,5 @@ export const styles = [
     },
 ];
 
-export const key = 'someKey'
+export const key = 'need key for maps'
 export const center = { lat: 50.6199, lng: 26.2516 };

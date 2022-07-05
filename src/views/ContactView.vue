@@ -52,7 +52,7 @@ const openModal = () => {
       </TagSlot>
     </div>
     <div class="hide-map">
-      <MapBlock></MapBlock>
+      <!-- <MapBlock></MapBlock> -->
     </div>
   </div>
 </template>
