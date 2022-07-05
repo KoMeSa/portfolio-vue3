@@ -15,7 +15,7 @@
     width: 100%;
 
     @media screen and (max-width: 1200px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: none;
     }
 
     .left-side {
@@ -28,6 +28,6 @@
     }
 
     .right-side {
-        padding: 50px;
+        padding: 20px;
     }
 }

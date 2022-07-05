@@ -19,6 +19,12 @@ import r from "@/assets/r.svg";
 .block {
   display: flex;
   flex-direction: row;
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column;
+    }
+
+
   .block__image {
     border: 1px solid $color-border;
     position: relative;
