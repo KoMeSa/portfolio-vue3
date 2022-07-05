@@ -4,8 +4,8 @@ import RInput from "@/components/UI/RInput.vue";
 import RTextarea from "@/components/UI/RTextarea.vue";
 import RButton from "@/components/UI/RButton.vue";
 import TagSlot from "@/components/TagSlot.vue";
-import MapBlock from "@/components/MapBlock.vue";
 import TagText from "@/components/TagText.vue";
+import SocialsBlock from "@/components/SocialsBlock.vue";
 import RModal from "@/components/UI/RModal.vue";
 import { contactTitle } from "@/helpers/letterArray";
 import { ref } from "vue";
@@ -51,14 +51,14 @@ const openModal = () => {
         </div>
       </TagSlot>
     </div>
-    <div class="hide-map">
-      <!-- <MapBlock></MapBlock> -->
+    <div>
+      <SocialsBlock></SocialsBlock>
     </div>
   </div>
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .link {
   display: flex;
   justify-content: flex-start;
@@ -73,11 +73,6 @@ const openModal = () => {
   svg {
     height: 30px;
     width: 30px;
-  }
-}
-.hide-map {
-  @media screen and (max-width: 1200px) {
-    display: none;
   }
 }
 </style>
