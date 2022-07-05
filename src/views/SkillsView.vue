@@ -13,8 +13,8 @@ import { skillsTitle, skillsText } from "@/helpers/letterArray";
     <div class="left-side">
       <TagSlot tag="body">
         <div style="padding: 50px">
-          <TagText :lettersArray="skillsTitle" mBottom="20px"></TagText>
-          <TagText :text="skillsText" tag="p" mBottom="40px"></TagText>
+          <TagText :lettersArray="skillsTitle"></TagText>
+          <TagText :text="skillsText" tag="p"></TagText>
           <div style="display: flex; justify-content: center">
             <router-link to="/contact">
               <RButton>Contact me:)</RButton>

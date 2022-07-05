@@ -14,8 +14,8 @@ import logo from "@/assets/logo.svg";
     <div class="left-side">
       <TagSlot tag="body">
         <div style="padding: 50px">
-          <TagText :lettersArray="homeTitle" mBottom="20px"></TagText>
-          <TagText :text="homeText" tag="p" mBottom="40px"></TagText>
+          <TagText :lettersArray="homeTitle"></TagText>
+          <TagText :text="homeText" tag="p"></TagText>
           <div style="display: flex; justify-content: center">
             <router-link to="/about">
               <RButton>About me:)</RButton>

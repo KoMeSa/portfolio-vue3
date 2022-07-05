@@ -14,18 +14,14 @@ const props = defineProps({
   text: {
     type: String,
     default: "",
-  },
-  mBottom: {
-    type: String,
-    default: "0px",
-  },
+  }
 });
 </script>
 
 
 
 <template>
-  <div class="block__text" :style="{ 'margin-bottom': mBottom }">
+  <div class="block__text">
     <div class="block__text-tag">&#60;{{ tag }}&#62;</div>
     <div v-if="lettersArray.length" class="block__text-title text-big">
       <span
@@ -45,11 +41,17 @@ const props = defineProps({
 
 <style lang="scss">
 .block__text {
+  margin-bottom: 20px;
+
   .block__text-title {
     padding: 15px 25px;
     color: $color-white;
     animation: left-text 1s ease;
     max-width: 600px;
+
+      @media screen and (max-width: 400px) {
+            padding: 10px 15px;
+        }
 
     .letter {
       display: inline-block;
@@ -77,14 +79,14 @@ const props = defineProps({
   }
 
    @media screen and (max-width: 400px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 .text-small {
   font-size: 20px;
   @media screen and (max-width: 1200px) {
-    font-size: 16px;
+    font-size: 10px;
   }
 
    @media screen and (max-width: 400px) {

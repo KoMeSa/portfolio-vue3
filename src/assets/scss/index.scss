@@ -20,10 +20,14 @@
 
     .left-side {
         padding: 20px 20px;
+
+        @media screen and (max-width: 400px) {
+            padding: 10px 10px;
+        }
+
     }
 
     .right-side {
         padding: 50px;
     }
 }
-

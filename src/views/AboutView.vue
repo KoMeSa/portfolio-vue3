@@ -12,8 +12,8 @@ import { aboutTitle, aboutText } from "@/helpers/letterArray";
     <div class="left-side">
       <TagSlot tag="body">
         <div style="padding: 50px">
-          <TagText :lettersArray="aboutTitle" mBottom="20px"></TagText>
-          <TagText :text="aboutText" tag="p" mBottom="40px"></TagText>
+          <TagText :lettersArray="aboutTitle"></TagText>
+          <TagText :text="aboutText" tag="p"></TagText>
           <div style="display: flex; justify-content: center">
             <router-link to="/skills">
               <RButton>My skills:)</RButton>
