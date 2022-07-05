@@ -1,6 +1,5 @@
 <script setup>
 import { mySocials } from "@/helpers/mySocials";
-
 </script>
 
 
@@ -23,11 +22,23 @@ import { mySocials } from "@/helpers/mySocials";
 
 <style lang="scss">
 .socials-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  padding: 0 20px;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: start;
+  // padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  gap: 5%;
+  padding: 20px;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 0;
+  }
 
   .socials {
     display: flex;
@@ -36,8 +47,8 @@ import { mySocials } from "@/helpers/mySocials";
     padding: 20px;
     border-radius: 10px;
     border: 1px solid $color-border;
-    max-width: 90%;
-    width: 100%;
+    // max-width: 90%;
+    // width: 100%;
     margin-bottom: 20px;
     text-decoration: none;
     background: $color-block;
