@@ -232,5 +232,5 @@ export const styles = [
     },
 ];
 
-export const key = 'AIzaSyAb7hgmLt9mU3vv9mNvG_ic2XxK3h0uE24&libraries=places'
+export const key = 'someKey'
 export const center = { lat: 50.6199, lng: 26.2516 };
