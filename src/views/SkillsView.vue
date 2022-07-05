@@ -16,7 +16,9 @@ import { skillsTitle, skillsText } from "@/helpers/letterArray";
           <TagText :lettersArray="skillsTitle" mBottom="20px"></TagText>
           <TagText :text="skillsText" tag="p" mBottom="40px"></TagText>
           <div style="display: flex; justify-content: center">
-            <RButton>Contact me:)</RButton>
+            <router-link to="/contact">
+              <RButton>Contact me:)</RButton>
+            </router-link>
           </div>
         </div>
       </TagSlot>

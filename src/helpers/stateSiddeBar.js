@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 
 
-export const collapsed = ref(false);
+export const collapsed = ref(true);
 
 window.addEventListener("resize", () => {
     if (window.innerWidth <= 600) {
