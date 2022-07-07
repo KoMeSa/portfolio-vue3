@@ -41,7 +41,7 @@ const props = defineProps({
 
 <style lang="scss">
 .block__text {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   .block__text-title {
     padding: 15px 25px;
@@ -68,6 +68,10 @@ const props = defineProps({
   }
   .block__text-tag {
     color: $color-gray;
+     font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
   }
 }
 

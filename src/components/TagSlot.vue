@@ -28,6 +28,10 @@ const props = defineProps({
     max-width: 500px;
   }
   .block__text-tag {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
     color: $color-gray;
   }
 }

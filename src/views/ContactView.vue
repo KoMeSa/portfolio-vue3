@@ -36,7 +36,7 @@ const openModal = () => {
   <div class="container">
     <div class="left-side">
       <TagSlot tag="body">
-        <div style="padding: 50px">
+        <div style="padding: 30px">
           <TagText tag="h1" :lettersArray="contactTitle"></TagText>
           <Card>
             <form>
